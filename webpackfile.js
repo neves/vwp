@@ -1,5 +1,3 @@
-console.log(process.env.NODE_PATH)
-
 const merge = require('wpc/merge')
 
 var config = merge(
@@ -19,6 +17,7 @@ var config = merge(
     filename: '[name].js'
   },
   devServer: {
+    host: '0.0.0.0',
     noInfo: true
   },
 
