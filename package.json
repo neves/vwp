@@ -14,7 +14,7 @@
   ],
   "author": "Marcos Neves <marcos.neves@gmail.com> (http://neves.github.io/)",
   "license": "MIT",
-  "bin": "./bin/vwp.sh",
+  "bin": "./bin/vwp",
   "files": [
     "bin/",
     "*.js"
