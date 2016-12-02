@@ -42,6 +42,6 @@
     "vue-template-compiler": "^2.1.3",
     "webpack": "^2.1.0-beta.27",
     "webpack-dev-server": "^2.1.0-beta.12",
-    "wpc": "^0.0.14"
+    "wpc": "^0.0.15"
   }
 }
