@@ -4409,9 +4409,9 @@ wordwrap@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.2.tgz#b79669bb42ecb409f83d583cad52ca17eaa1643f"
 
-wpc@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/wpc/-/wpc-0.0.9.tgz#7aafbf1aae508419f7c7191cf71ee561bb48f3cd"
+wpc@^0.0.14:
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/wpc/-/wpc-0.0.14.tgz#87da95fc2130799ee25f54727340733c8d5855ff"
   dependencies:
     webpack-merge-plus "^0.1.1"
 

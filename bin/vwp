@@ -1,0 +1,17 @@
+#!/bin/sh
+# add local and global node_modules to the path
+# https://gist.github.com/branneman/8048520#4-the-environment
+
+vwp=$(node -e "console.log(require('fs').realpathSync('$0'))")
+cmd=$(node "$vwp.js" "$@")
+exit_status=$?
+if [ $exit_status -eq 0 ]
+then
+  echo "\n\033[0;36m$cmd\033[0m\n" # show command in blue
+  # echo $cmd | sh
+  sh -c "$cmd"
+  exit $?
+else
+  echo "\033[0;31m$cmd\033[0m" # show error message in red
+  exit $exit_status
+fi
