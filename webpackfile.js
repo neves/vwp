@@ -1,31 +1,36 @@
 const merge = require('wpc/merge')
 
-module.exports = env => {
-  var root = process.cwd()
-  var config = merge(
+module.exports = env => merge(
     require('wpc/defaults'),
     ({context}) => ({
       env: {
-        root: root,
-        src: root + '/src'
+        debug: process.env.DEBUG || ['--debug', '-d', '--verbose'].some(e => process.argv.includes(e)),
+        src: context + '/src'
       },
-      entry: root + '/src/index.js',
+      entry: context + '/src/index.js',
       output: {
-        path: root + '/dist',
-        filename: '[name].js'
+        path: context + '/dist'
       },
       devServer: {
-        host: '0.0.0.0',
+        host: '0.0.0.0'
         noInfo: true
       }
     }),
+
+    {env},
+
     require('wpc/resolve-src'),
     require('wpc/global-modules'),
     require('wpc/global-loaders'),
+
     require('wpc/define-env'),
     require('wpc/define-version'),
+
     require('wpc/css'),
+    require('wpc/html'),
     require('wpc/coffee'),
+    require('wpc/json'),
+    require('wpc/yml'),
 
     require('wpc/babel'),
     require('wpc/babel-es2015'),
@@ -36,12 +41,12 @@ module.exports = env => {
     require('wpc/vue-pug'),
     require('wpc/vue-scss'),
     require('wpc/vue-sass'),
+    require('wpc/vue-less'),
     require('wpc/vue-stylus'),
 
-    require('wpc/html'),
+    require('wpc/vendor'),
+    require('wpc/manifest'),
+    require('wpc/custom'),
     require('wpc/dump-conf'),
     require('wpc/delete-properties')
-  )
-
-  return config
-}
+)
