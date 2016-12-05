@@ -12,7 +12,7 @@ module.exports = env => merge(
         path: context + '/dist'
       },
       devServer: {
-        host: '0.0.0.0'
+        host: '0.0.0.0',
         noInfo: true
       }
     }),
