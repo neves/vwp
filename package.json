@@ -27,6 +27,7 @@
     "coffee-loader": "^0.7.2",
     "coffee-script": "^1.12.0",
     "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "html-webpack-plugin": "^2.24.1",
     "json-loader": "^0.5.4",
     "less": "^2.7.1",
@@ -43,7 +44,7 @@
     "vue-template-compiler": "^2.1.4",
     "webpack": "^2.1.0-beta.27",
     "webpack-dev-server": "^2.1.0-beta.12",
-    "wpc": "^0.0.18",
+    "wpc": "^0.0.20",
     "yml-loader": "^1.1.0"
   }
 }
