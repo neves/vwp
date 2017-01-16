@@ -4516,9 +4516,9 @@ wordwrap@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.2.tgz#b79669bb42ecb409f83d583cad52ca17eaa1643f"
 
-wpc@^0.0.21:
-  version "0.0.21"
-  resolved "https://registry.yarnpkg.com/wpc/-/wpc-0.0.21.tgz#a3ca1aa569bce80ad5c472ee6c5dc7b0ca766dbf"
+wpc@>=0.0.22:
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/wpc/-/wpc-0.0.22.tgz#82e9cb57df55f327a6b62ed986f71a9574507ee9"
   dependencies:
     prettyjson "^1.2.1"
     webpack-merge-plus "^0.1.1"
