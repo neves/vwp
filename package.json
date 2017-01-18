@@ -1,6 +1,6 @@
 {
   "name": "vwp",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "Webpack Vue.js build tool",
   "main": "index.js",
   "scripts": {
