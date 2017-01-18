@@ -33,6 +33,8 @@ module.exports = (env, argv) => merge(
   require('wpc/coffee'),
   require('wpc/json'),
   require('wpc/yml'),
+  require('wpc/images'),
+  require('wpc/fonts'),
 
   require('wpc/babel'),
   require('wpc/babel-es2015'),
