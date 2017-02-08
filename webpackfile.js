@@ -3,6 +3,9 @@ const Path = require('path')
 
 module.exports = (env, argv) => merge(
   {env, argv},
+  stats: {
+    children: false
+  },
   require('wpc/required'),
   require('wpc/argv'),
   require('wpc/dev-server'),
@@ -29,6 +32,11 @@ module.exports = (env, argv) => merge(
   require('wpc/define-version'),
 
   require('wpc/css'),
+  require('wpc/css-less'),
+  require('wpc/css-sass'),
+  require('wpc/css-scss'),
+  require('wpc/css-stylus'),
+
   require('wpc/html'),
   require('wpc/coffee'),
   require('wpc/json'),
