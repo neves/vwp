@@ -3,9 +3,7 @@ const Path = require('path')
 
 module.exports = (env, argv) => merge(
   {env, argv},
-  stats: {
-    children: false
-  },
+  {stats: {children: false}},
   require('wpc/required'),
   require('wpc/argv'),
   require('wpc/dev-server'),
