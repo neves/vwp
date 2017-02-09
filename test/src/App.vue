@@ -7,4 +7,8 @@
 #main {
   width: 50%;
 }
+
+h1 {
+  color: red;
+}
 </style>
