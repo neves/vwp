@@ -24,6 +24,11 @@ switch (action) {
     args.push('--hot')
     break
 
+  case '--version':  
+  case '-v':
+    console.log('echo', 'VWP version: ', require('../package.json').version)
+    return
+
   default:
     console.log('missing command: build, dev or dist')
     process.exit(1)
