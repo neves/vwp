@@ -24,9 +24,10 @@ switch (action) {
     args.push('--hot')
     break
 
-  case '--version':  
+  case '--version':
   case '-v':
-    console.log('echo', 'VWP version: ', require('../package.json').version)
+    console.log(require('../package.json').version)
+    process.exit(1)
     return
 
   default:
