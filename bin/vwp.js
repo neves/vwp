@@ -2,25 +2,24 @@ const Path = require('path')
 
 const action = process.argv[2]
 var args = process.argv.slice(3)
-var env = process.env.NODE_ENV
-var webpack
+var env, bin
 
 switch (action) {
   case 'build':
-    webpack = 'webpack'
-    env = env || 'production'
+    bin = 'webpack'
+    env = 'production'
     break
 
   case 'dist':
-    webpack = 'webpack'
-    env = env || 'production'
+    bin = 'webpack'
+    env = 'production'
     args.push('-p')
     break
 
   case 'dev':
   case 'start':
-    webpack = 'webpack-dev-server'
-    env = env || 'development'
+    bin = 'webpack-dev-server'
+    env = 'development'
     args.push('--hot')
     break
 
@@ -36,10 +35,16 @@ switch (action) {
 }
 
 var cmd = []
-cmd.push(require.resolve(`.bin/${webpack}`))
+if (!process.env.NODE_ENV) {
+  cmd.push(`NODE_ENV=${env}`) // add NODE_ENV only if not already defined
+}
+cmd.push(require.resolve(`.bin/${bin}`))
 cmd.push('--config')
 cmd.push(Path.resolve(__dirname, '../webpackfile.js'))
 cmd.push('--progress')
+if (bin == 'webpack') {
+  cmd.push('--hide-modules') // webpack-dev-server does not have hide-modules
+}
 cmd.push(...args)
 
 console.log(cmd.join(' '))

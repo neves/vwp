@@ -1,3 +1,5 @@
+console.log('NODE_ENV:', process.env.NODE_ENV)
+
 merge = require('wpc/merge')
 const Path = require('path')
 
