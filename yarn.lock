@@ -3549,7 +3549,7 @@ pug-walk@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/pug-walk/-/pug-walk-1.1.1.tgz#b9976240d213692e6993fbc13ae1205c54052efe"
 
-pug@^2.0.0-beta11:
+pug@>=2.0.0-beta11:
   version "2.0.0-beta9"
   resolved "https://registry.yarnpkg.com/pug/-/pug-2.0.0-beta9.tgz#158ec6dbace5bb78f2b25e8825477d03ea6e14b0"
   dependencies:
@@ -4562,10 +4562,11 @@ wordwrap@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.2.tgz#b79669bb42ecb409f83d583cad52ca17eaa1643f"
 
-wpc@>=0.0.27:
-  version "0.0.27"
-  resolved "https://registry.yarnpkg.com/wpc/-/wpc-0.0.27.tgz#5505d0e79f5ab1691c1dc1ced54343ff3862db21"
+wpc@>=0.0.30:
+  version "0.0.30"
+  resolved "https://registry.yarnpkg.com/wpc/-/wpc-0.0.30.tgz#4d3ce0bdd5eccf813d39eb7c2a8767ff9b92c520"
   dependencies:
+    extract-text-webpack-plugin "^2.0.0-rc.3"
     prettyjson "^1.2.1"
     webpack-merge-plus "^0.1.1"
 
