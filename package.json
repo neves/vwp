@@ -4,7 +4,7 @@
   "description": "Webpack Vue.js build tool",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cd test && ../bin/vwp build $@"
   },
   "keywords": [
     "webpack",
@@ -46,7 +46,7 @@
     "vue-template-compiler": "^2.1.10",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.3.0",
-    "wpc": ">=0.0.32",
+    "wpc": ">=0.0.33",
     "yml-loader": "^1.1.0"
   }
 }

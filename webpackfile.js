@@ -3,9 +3,9 @@ console.log('NODE_ENV:', process.env.NODE_ENV)
 merge = require('wpc/merge')
 const Path = require('path')
 
-module.exports = (env, argv) => merge(
+module.exports = (env = {}, argv) => merge(
   {env, argv},
-  {stats: {children: false}},
+  require('wpc/env'),
   require('wpc/required'),
   require('wpc/argv'),
   require('wpc/dev-server'),
@@ -14,6 +14,7 @@ module.exports = (env, argv) => merge(
     env: {
       src: context + '/src'
     },
+    stats: {children: false},
     entry: context + '/src/index.js',
     output: {
       path: context + '/dist'
@@ -34,7 +35,6 @@ module.exports = (env, argv) => merge(
   require('wpc/css'),
   require('wpc/html'),
   require('wpc/coffee'),
-  require('wpc/json'),
   require('wpc/yml'),
   require('wpc/images'),
   require('wpc/fonts'),
