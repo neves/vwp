@@ -1,0 +1,23 @@
+{
+  "name": "template",
+  "version": "0.0.1",
+  "description": "VWP Template",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "IP_LOCAL=$(ipconfig getifaddr en0) vwp dev",
+    "build": "vwp build",
+    "dist": "vwp dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "peerDependencies": {
+    "json-server": "^0.9.4",
+    "vwp": ">=0.0.33"
+  },
+  "dependencies": {
+    "vue-router": "^2.2.1",
+    "vuex": "^2.1.2"
+  }
+}
