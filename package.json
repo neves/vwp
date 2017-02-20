@@ -4,7 +4,7 @@
   "description": "Webpack Vue.js build tool",
   "main": "index.js",
   "scripts": {
-    "test": "cd test && ../bin/vwp build $@",
+    "test": "cd test && ../bin/vwp $@",
     "deploy": "npm version patch && git push --follow-tags && npm publish"
   },
   "keywords": [

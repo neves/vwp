@@ -48,6 +48,7 @@ module.exports = (env = {}, argv) => merge(
 
   require('wpc/vendor'),
   require('wpc/manifest'),
+  require('wpc/friendly-errors'),
   require('wpc/custom'),
   require('wpc/dump-conf'),
   require('wpc/delete-properties')

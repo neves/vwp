@@ -3,6 +3,12 @@
   h1 Vue WebPack
 </template>
 
+<script>
+export default {
+
+}
+</script>
+
 <style>
 #main {
   width: 50%;
