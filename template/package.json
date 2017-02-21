@@ -14,7 +14,7 @@
   "license": "MIT",
   "peerDependencies": {
     "json-server": "^0.9.4",
-    "vwp": ">=0.0.33"
+    "vwp": ">=0.0.36"
   },
   "dependencies": {
     "vue-router": "^2.2.1",
