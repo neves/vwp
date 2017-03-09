@@ -13,11 +13,11 @@ exit_status=$?
 
 if [ $exit_status -eq 0 ]
 then
-  echo "\n\033[0;36m$cmd\033[0m\n" # show command in blue
+  echo "\n\033[0;36m$cmd\033[0m\n" 1>&2 # show command in blue
   # echo $cmd | sh
   sh -c "$cmd"
   exit $?
 else
-  echo "\033[0;31m$cmd\033[0m" # show error message in red
+  echo "\033[0;31m$cmd\033[0m" 1>&2 # show error message in red
   exit $exit_status
 fi

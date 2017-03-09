@@ -11,6 +11,7 @@ switch (action) {
     break
 
   case 'dist':
+  case 'stats':
     bin = 'webpack'
     env = 'production'
     args.push('-p')
@@ -42,9 +43,13 @@ cmd.push(require.resolve(`.bin/${bin}`))
 cmd.push('--config')
 cmd.push(Path.resolve(__dirname, '../webpackfile.js'))
 cmd.push('--progress')
-if (bin == 'webpack') {
+
+if (action === 'stats') {
+  cmd.push('--profile', '--json')
+} else if (bin === 'webpack') {
   cmd.push('--hide-modules') // webpack-dev-server does not have hide-modules
 }
+
 cmd.push(...args)
 
 console.log(cmd.join(' '))
