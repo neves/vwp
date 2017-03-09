@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "cd test && ../bin/vwp $@",
+    "upgrade:check": "ncu",
+    "upgrade:apply": "ncu -a",
     "deploy": "npm version patch && git push --follow-tags && npm publish"
   },
   "keywords": [
@@ -22,33 +24,36 @@
   ],
   "dependencies": {
     "babel-core": "^6.23.1",
-    "babel-loader": "^6.3.2",
+    "babel-loader": "^6.4.0",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-stage-3": "^6.22.0",
     "coffee-loader": "^0.7.3",
     "coffee-script": "^1.12.4",
     "copy-webpack-plugin": "^4.0.1",
-    "css-loader": "^0.26.2",
+    "css-loader": "^0.26.4",
     "file-loader": "^0.10.1",
+    "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.28.0",
     "json-loader": "^0.5.4",
     "less": "^2.7.2",
-    "less-loader": "^2.2.3",
+    "less-loader": "^3.0.0",
     "node-sass": "^4.5.0",
     "pug": "2.0.0-beta11",
     "pug-loader": "^2.3.0",
-    "sass-loader": "^6.0.2",
+    "sass-loader": "^6.0.3",
     "style-loader": "^0.13.2",
     "stylus": "^0.54.5",
-    "stylus-loader": "^2.5.0",
+    "stylus-loader": "^3.0.1",
     "url-loader": "^0.5.8",
     "vue": "^2.2.1",
     "vue-loader": "^11.1.4",
     "vue-template-compiler": "^2.2.1",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1",
-    "wpc": ">=0.0.35",
-    "yml-loader": "^1.1.0",
-    "friendly-errors-webpack-plugin": "^1.6.1"
+    "wpc": ">=0.0.36",
+    "yml-loader": "^1.1.0"
+  },
+  "devDependencies": {
+    "npm-check-updates": "^2.10.3"
   }
 }
