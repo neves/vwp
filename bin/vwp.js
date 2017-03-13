@@ -31,7 +31,7 @@ switch (action) {
     return
 
   default:
-    console.log('missing command: build, dev or dist')
+    console.log('missing command: build, dev, dist or stats')
     process.exit(1)
 }
 
