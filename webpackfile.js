@@ -21,6 +21,7 @@ module.exports = (env = {}, argv) => merge(
     },
     devServer: {
       host: '0.0.0.0',
+      disableHostCheck: true,
       noInfo: true
     }
   }),
