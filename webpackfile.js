@@ -2,6 +2,7 @@ console.error('NODE_ENV:', process.env.NODE_ENV)
 
 merge = require('wpc/merge')
 const Path = require('path')
+const webpack = require.main.require('webpack')
 
 module.exports = (env = {}, argv) => merge(
   {env, argv},
@@ -23,7 +24,10 @@ module.exports = (env = {}, argv) => merge(
       host: '0.0.0.0',
       disableHostCheck: true,
       noInfo: true
-    }
+    },
+    plugins: [
+      new webpack.optimize.ModuleConcatenationPlugin()
+    ]
   }),
 
   require('wpc/resolve-src'),
