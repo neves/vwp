@@ -2,7 +2,7 @@ console.error('NODE_ENV:', process.env.NODE_ENV)
 
 merge = require('wpc/merge')
 const Path = require('path')
-const webpack = require.main.require('webpack')
+const webpack = require('webpack')
 
 module.exports = (env = {}, argv) => merge(
   {env, argv},
