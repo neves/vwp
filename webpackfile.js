@@ -45,7 +45,7 @@ module.exports = (env = {}, argv) => merge(
   require('wpc/fonts'),
 
   require('wpc/babel'),
-  require('wpc/babel-es2015'),
+  require('wpc/babel-env'),
   require('wpc/babel-stage3'),
 
   require('wpc/vue'),
