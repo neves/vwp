@@ -6773,7 +6773,7 @@ wordwrap@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.2.tgz#b79669bb42ecb409f83d583cad52ca17eaa1643f"
 
-wpc@>=0.3.0:
+wpc@>=0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/wpc/-/wpc-0.3.1.tgz#3f2cc433071aad7d4362dc0209b831e8d99ee832"
   dependencies:
